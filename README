@@ -1,0 +1,12 @@
+NeoRouter Client (Free) Docker
+
+Running a NeoRouter client in Docker may be useful in embedded devices where the NeoRouter client will not install or run. This client was built on a Synology but should be applicable to many environments.
+
+Host networking is strongly recommended to avoid duplicate NeoRouter HW IDs in the NeoRouter network. Duplicate HW IDs cause the NeoRouter network to tread the clients as the same and will give them the same IP address.
+
+Elevated Permissions (--priviledged) are required in order to create and manage the tap device used by NeoRouter.
+
+Environment variables expected: NR_DOMAIN = name of the NeoRouter domain to connect to NR_USER = username with permissions to connect to the domain NR_USER_PASSWD = password for NR_USER
+
+Persistent configuration storage should be mounted to /config
+
