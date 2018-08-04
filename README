@@ -6,7 +6,11 @@ Host networking is strongly recommended to avoid duplicate NeoRouter HW IDs in t
 
 Elevated Permissions (--priviledged) are required in order to create and manage the tap device used by NeoRouter.
 
-Environment variables expected: NR_DOMAIN = name of the NeoRouter domain to connect to NR_USER = username with permissions to connect to the domain NR_USER_PASSWD = password for NR_USER
+Environment variables expected: 
+NR_DOMAIN = name of the NeoRouter domain to connect to 
+NR_USER = username with permissions to connect to the domain 
+NR_USER_PASSWD = password for NR_USER
+HOSTNAME = Optional string to define the hostname of the instance
 
 Persistent configuration storage should be mounted to /config
 
