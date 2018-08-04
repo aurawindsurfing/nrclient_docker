@@ -16,6 +16,14 @@ if [ -z "$NR_USER_PASSWD" ] ; then
 	exit 1
 fi
 
+# Set hostname if desired
+if [ ! -z "$HOSTNAME" ] ; then
+        if [ "$HOSTNAME" != $(hostname) ] ; then
+                echo "$HOSTNAME" > /etc/hostname
+                /bin/hostname "$HOSTNAME"
+        fi
+fi
+
 # Get and install the NeoRouter client
 if [ ! -f /usr/bin/nrservice ] ; then 
 	wget -q http://download.neorouter.com/Downloads/NRFree/Update_2.3.1.4360/Linux/Ubuntu/nrclient-2.3.1.4360-free-ubuntu-amd64.deb -O /tmp/neorouter.deb && \
