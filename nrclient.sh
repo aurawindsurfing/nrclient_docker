@@ -26,7 +26,7 @@ fi
 
 # Get and install the NeoRouter client
 if [ ! -f /usr/bin/nrservice ] ; then 
-	wget -q http://download.neorouter.com/Downloads/NRFree/Update_2.3.1.4360/Linux/Ubuntu/nrclient-2.3.1.4360-free-ubuntu-amd64.deb -O /tmp/neorouter.deb && \
+	wget -q http://download.neorouter.com/Downloads/NRPro/Update_2.6.2.5020/Linux/Ubuntu/nrclient-2.6.2.5020-pro-ubuntu-amd64.deb -O /tmp/neorouter.deb && \
 		dpkg -i /tmp/neorouter.deb && rm -f /tmp/neorouter.deb
 fi
 
